@@ -17,8 +17,7 @@ public class RuoloServiceImpl implements RuoloService {
 
 	@Transactional(readOnly = true)
 	public List<Ruolo> listAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return (List<Ruolo>) ruoloRepository.findAll();
 	}
 
 	@Transactional(readOnly = true)
@@ -28,8 +27,7 @@ public class RuoloServiceImpl implements RuoloService {
 
 	@Transactional
 	public void aggiorna(Ruolo ruoloInstance) {
-		// TODO Auto-generated method stub
-
+		ruoloRepository.save(ruoloInstance);
 	}
 
 	@Transactional
@@ -39,8 +37,7 @@ public class RuoloServiceImpl implements RuoloService {
 
 	@Transactional
 	public void rimuovi(Ruolo ruoloInstance) {
-		// TODO Auto-generated method stub
-
+		ruoloRepository.delete(ruoloInstance);
 	}
 
 	@Transactional(readOnly = true)
