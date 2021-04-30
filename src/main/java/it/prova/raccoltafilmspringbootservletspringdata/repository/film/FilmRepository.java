@@ -1,8 +1,9 @@
 package it.prova.raccoltafilmspringbootservletspringdata.repository.film;
 
-import org.springframework.data.repository.CrudRepository;
-import it.prova.raccoltafilmspringbootservletspringdata.model.Film;
+        import org.springframework.data.repository.CrudRepository;
 
-public interface FilmRepository extends CrudRepository<Film, Long> , CustomFilmRepository{
+        import it.prova.raccoltafilmspringbootservletspringdata.model.Film;
+
+public interface FilmRepository extends CrudRepository<Film, Long>, CustomFilmRepository{
 
 }
