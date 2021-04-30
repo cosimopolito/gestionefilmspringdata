@@ -43,13 +43,13 @@
 	    <div class="row">
 	      <div class="col-md-6">
 	        <h2>Gestione Registi</h2>
-	        <p>Questa funzionalità è realtiva alla Gestione dei Registi</p>
-	        <p><a class="btn btn-primary" href="PrepareSearchRegistaServlet" role="button">Vai alla Funzionalità &raquo;</a></p>
+	        <p>Questa funzionalitï¿½ ï¿½ realtiva alla Gestione dei Registi</p>
+	        <p><a class="btn btn-primary" href="PrepareSearchRegistaServlet" role="button">Vai alla Funzionalitï¿½ &raquo;</a></p>
 	      </div>
 	      <div class="col-md-6">
 	        <h2>Gestione Film</h2>
-	        <p>Questa funzionalità è realtiva alla Gestione di Film</p>
-	        <p><a class="btn btn-primary" href="PrepareSearchFilmServlet" role="button">Vai alla Funzionalità &raquo;</a></p>
+	        <p>Questa funzionalitï¿½ ï¿½ realtiva alla Gestione di Film</p>
+	        <p><a class="btn btn-primary" href="PrepareSearchFilmServlet" role="button">Vai alla Funzionalitï¿½ &raquo;</a></p>
 	      </div>
 	    </div>
 	    
