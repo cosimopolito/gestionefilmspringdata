@@ -43,8 +43,7 @@ public class UtenteServiceImpl implements UtenteService {
 
 	@Transactional(readOnly = true)
 	public List<Utente> findByExample(Utente example) {
-		// TODO Auto-generated method stub
-		return null;
+		return repository.findByExample(example);
 	}
 
 	@Transactional(readOnly = true)

@@ -6,7 +6,7 @@ import org.springframework.data.repository.CrudRepository;
 import it.prova.raccoltafilmspringbootservletspringdata.model.StatoUtente;
 import it.prova.raccoltafilmspringbootservletspringdata.model.Utente;
 
-public interface UtenteRepository extends CrudRepository<Utente, Long> {
+public interface UtenteRepository extends CrudRepository<Utente, Long>, CustomUtenteRepository {
 	
 	Utente findByUsernameAndPassword(String username, String password);
 	
