@@ -28,7 +28,7 @@ public class RegistaServiceImpl implements RegistaService {
 
 	@Transactional(readOnly = true)
 	public Regista caricaSingoloElementoConFilms(Long id) {
-		return null;
+		return repository.findOneEager(id);
 	}
 
 	@Transactional

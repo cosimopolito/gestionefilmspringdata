@@ -6,4 +6,5 @@ import it.prova.raccoltafilmspringbootservletspringdata.model.Regista;
 
 public interface CustomRegistaRepository {
 	List<Regista> findByExample(Regista example);
+	Regista findOneEager(Long id);
 }
