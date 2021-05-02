@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.math.NumberUtils;
 
 public class Utility {
 
@@ -17,5 +18,19 @@ public class Utility {
 		} catch (ParseException e) {
 			return null;
 		}
+	}
+	public static Integer parseNumberIntegerFromString(String numberStringParam) {
+		if (!StringUtils.isBlank(numberStringParam)){
+			if (NumberUtils.isCreatable(numberStringParam)) {
+				return Integer.parseInt(numberStringParam);
+			}
+		}return null;
+	}
+	public static Long parseNumberLongFromString(String numberStringParam) {
+		if (!StringUtils.isBlank(numberStringParam)){
+			if (NumberUtils.isCreatable(numberStringParam)) {
+				return Long.parseLong(numberStringParam);
+			}
+		}return null;
 	}
 }

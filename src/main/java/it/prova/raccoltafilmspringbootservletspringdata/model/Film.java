@@ -29,7 +29,7 @@ public class Film {
 	@Column(name = "minutiDurata")
 	private Integer minutiDurata;
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne()
 	@JoinColumn(name = "regista_id")
 	private Regista regista;
 

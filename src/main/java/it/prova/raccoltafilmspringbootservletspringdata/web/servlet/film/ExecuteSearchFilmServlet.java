@@ -7,6 +7,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import it.prova.raccoltafilmspringbootservletspringdata.dto.RegistaDTO;
+import it.prova.raccoltafilmspringbootservletspringdata.model.Regista;
+import it.prova.raccoltafilmspringbootservletspringdata.model.Sesso;
+import it.prova.raccoltafilmspringbootservletspringdata.service.RegistaService;
+import it.prova.raccoltafilmspringbootservletspringdata.utility.Utility;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -20,14 +26,23 @@ public class ExecuteSearchFilmServlet extends HttpServlet {
 
 	@Autowired
 	private FilmService filmService;
+	@Autowired
+	private RegistaService registaService;
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		// da implementare
-		Film example = new Film();
-
+		String titoloParam = request.getParameter("titolo");
+		String genereParam = request.getParameter("genere");
+		String dataPubblicazioneParam = request.getParameter("dataPubblicazione");
+		String minutiDurataParam = request.getParameter("minutiDurata");
+		String registaParam = request.getParameter("regista.id");
+		Regista regista = new Regista();
+		regista.setId(Utility.parseNumberLongFromString(registaParam));
+ 		Film example = new Film(titoloParam, genereParam, Utility.parseDateFromString(dataPubblicazioneParam),
+				Utility.parseNumberIntegerFromString(minutiDurataParam), regista);
 		try {
+
 			request.setAttribute("film_list_attribute",
 					FilmDTO.createFilmDTOListFromModelList(filmService.findByExample(example), false));
 		} catch (Exception e) {
