@@ -27,7 +27,7 @@ public class FilmServiceImpl implements FilmService {
 
 	@Transactional(readOnly = true)
 	public Film caricaSingoloElementoEager(Long id) {
-		return null;
+		return  repository.findById(id).orElse(null);
 	}
 
 	@Transactional
